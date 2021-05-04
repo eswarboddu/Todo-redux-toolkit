@@ -5,7 +5,6 @@ export const fetchTodos = createAsyncThunk(
   "todos/fetchTodosAsync",
   async () => {
     const response = await fetch("http://localhost:7000/todos");
-
     if (response.ok) {
       const todos = await response.json();
       return { todos };
